@@ -1,0 +1,26 @@
+<div class="modal">
+    <label class="modal-bg" for="modal-add-task-#{container.id}"></label>
+    <div class="modal-body">
+        <label class="btn-close" for="modal-add-task-#{container.id}">X</label>
+        <h4 class="modal-title">Add task</h4>
+        <form action="/" method="post" enctype="multipart/form-data" id="add-task">
+            <div class="form-group">
+                <label for="paperInputTask#{container.id}">Task name</label>
+                <input type="text" placeholder="Task name" id="paperInputTask#{container.id}" name="task-name">
+            </div>
+            <div class="form-group">
+                <label for="paperDateTask#{container.id}">Task expires</label>
+                <input type="datetime-local" placeholder="Task expires" id="paperDateTask#{container.id}" name="task-expires">
+            </div>
+            <div class="form-group">
+                <label for="paperDescrTask#{container.id}">Task description</label>
+                <input type="text" placeholder="Task description" id="paperDescrTask#{container.id}" name="task-description">
+            </div>
+            <div class="form-group">
+                <label for="paperDescrTask#{container.id}">Related files</label>
+                <input type="file" id="paperFileTask#{container.id}" name="task-files">
+            </div>
+            <button class="margin" name="add-task" value="#{container.id}">Accept</button>
+        </form>
+    </div>
+</div>

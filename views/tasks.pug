@@ -1,0 +1,27 @@
+each task in container.tasks
+    - var cond = (container.isShowingComplete) ? true : !task.isComplete;
+    if cond
+        <div class="card margin">
+            <div class="card-body">
+                h4.card-title #{task.name}
+                    - var dayDiff = (task.expires.getTime() - (new Date()).getTime()) / (1000 * 3600 * 24)
+                    - if (task.isComplete) {
+                    span.badge.success Complete
+                    - } else if (dayDiff > 0 && dayDiff < 1) {
+                    span.badge.warning Soon
+                    - } else if (dayDiff <= 0) {
+                    span.badge.danger Expired
+                    - }
+                if !task.isComplete
+                    <h5 class="card-subtitle">Expires: #{moment(task.expires).format("DD.MM.YYYY HH:mm")}</h5>
+                if task.file !== undefined
+                    <p class="card-text">Attached file: <a href="download/#{task.id}/#{task.file.filename}">#{task.file.originalname}</a></p>
+                <p class="card-text">#{task.description}</p>
+                <label class="paper-btn" for="modal-edit-task-#{container.id}-#{task.id}">Edit task</label>
+                <input class="modal-state" id="modal-edit-task-#{container.id}-#{task.id}" type="checkbox">
+                include modalEditTask
+                <label class="paper-btn" for="modal-move-task-#{container.id}-#{task.id}">Move task</label>
+                <input class="modal-state" id="modal-move-task-#{container.id}-#{task.id}" type="checkbox">
+                include modalMoveTask
+            </div>
+        </div>

@@ -1,0 +1,34 @@
+<div class="modal">
+    <label class="modal-bg" for="modal-edit-task-#{container.id}-#{task.id}"></label>
+    <div class="modal-body">
+        <label class="btn-close" for="modal-edit-task-#{container.id}-#{task.id}">X</label>
+        <h4 class="modal-title">Edit task</h4>
+        <form action="/" method="post">
+            <div class="form-group">
+                <label for="paperInputTask#{container.id}-#{task.id}">Task name</label>
+                <input type="text" placeholder="Task name" id="paperInputTask#{container.id}-#{task.id}" name="task-name" value="#{task.name}">
+            </div>
+            <div class="form-group">
+                <label for="paperDateTask#{container.id}">Task expires</label>
+                <input type="datetime-local" placeholder="Task expires" id="paperDateTask#{container.id}-#{task.id}" name="task-expires" value="#{moment(task.expires).format('YYYY-MM-DDTHH:mm')}">
+            </div>
+            <div class="form-group">
+                <label for="paperDescrTask#{container.id}-#{task.id}">Task description</label>
+                <input type="text" placeholder="Task description" id="paperDescrTask#{container.id}-#{task.id}" name="task-description" value="#{task.description}">
+            </div>
+            <fieldset class="form-group">
+                <label for="paperSwitch#{container.id}-#{task.id}" class="paper-switch-label">
+                    Task is complete
+                </label>
+                <label class="paper-switch">
+                    <input id="paperSwitch#{container.id}-#{task.id}" name="paper-switch" type="checkbox" />
+                    <span class="paper-switch-slider round"></span>
+                </label>
+            </fieldset>
+            <div class="row flex-edges">
+                <button class="btn-danger-outline" name="delete-task" value="#{container.id}-#{task.id}">Delete</button>
+                    <button name="edit-task" value="#{container.id}-#{task.id}">Accept</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+extends layout.pug
+
+block content
+
+        <div class="sm-12 col">
+            <div class="row flex-top">
+                each container in containers
+                    <div class="paper container-xs margin">
+                        <h3>#{container.name}</h3>
+                        include tasks
+                        <div class="row flex-center">
+                            <label class="paper-btn margin-right" for="modal-edit-#{container.id}">Edit container</label>
+                            <input class="modal-state" id="modal-edit-#{container.id}" type="checkbox">
+                            include modalEditContainer
+                            <label class="paper-btn margin-left" for="modal-add-task-#{container.id}">Add task</label>
+                            <input class="modal-state" id="modal-add-task-#{container.id}" type="checkbox">
+                            include modalAddTask
+                        </div>
+                    </div>
+                <form class="margin" action="/" method="post">
+                    <button name="add" value="add">+ Add container</button>
+                </form>
+            </div>
+        </div>

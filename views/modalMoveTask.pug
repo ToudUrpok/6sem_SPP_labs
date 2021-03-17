@@ -1,0 +1,20 @@
+<div class="modal">
+    <label class="modal-bg" for="modal-move-task-#{container.id}-#{task.id}"></label>
+    <div class="modal-body">
+        <label class="btn-close" for="modal-move-task-#{container.id}-#{task.id}">X</label>
+        <h4 class="modal-title">Move task</h4>
+        <form action="/" method="post">
+            <div class="form-group">
+                <label for="paperSelects">Select</label>
+                <select id="paperSelects" name="container">
+                    each con in containers
+                        if con.id === container.id
+                            <option value="#{con.id}" selected="selected">#{con.name}</option>
+                        else
+                            <option value="#{con.id}">#{con.name}</option>
+                </select>
+            </div>
+            <button name="move-task" value="#{container.id}-#{task.id}">Accept</button>
+        </form>
+    </div>
+</div>

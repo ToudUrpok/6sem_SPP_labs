@@ -1,0 +1,22 @@
+<div class="modal">
+    <label class="modal-bg" for="modal-edit-#{container.id}"></label>
+    <div class="modal-body">
+        <label class="btn-close" for="modal-edit-#{container.id}">X</label>
+        <h4 class="modal-title">Edit container</h4>
+        <form action="/" method="post">
+            <div class="form-group">
+                <label for="paperInputContainer#{container.id}">Container name</label>
+                <input type="text" placeholder="Container name" id="paperInputContainer#{container.id}" name="container-name" value="#{container.name}">
+            </div>
+            <fieldset class="form-group">
+                <label for="paperSwitch#{container.id}" class="paper-switch-label">Show completed?</label>
+                <label class="paper-switch">
+                    <input id="paperSwitch#{container.id}" name="paper-switch" type="checkbox" />
+                    <span class="paper-switch-slider round"></span>
+                </label>
+            </fieldset>
+            <button class="btn-danger-outline margin" name="delete-container" value="#{container.id}">Delete</button>
+            <button class="margin" name="edit-container" value="#{container.id}">Accept</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+{
+  "containers": [
+    {
+      "id": 2,
+      "name": "Learning",
+      "tasks": [
+        {
+          "id": 3,
+          "name": "SPP_Lab",
+          "expires": "2021-03-17T14:20:00.000Z",
+          "description": "Show project",
+          "isComplete": false,
+          "file": {
+            "fieldname": "task-files",
+            "originalname": "App.js",
+            "encoding": "7bit",
+            "mimetype": "text/javascript",
+            "destination": "uploads",
+            "filename": "ef6df68fafb354dc3d478ead92c0a618",
+            "path": "uploads\\ef6df68fafb354dc3d478ead92c0a618",
+            "size": 6284
+          }
+        },
+        {
+          "id": 4,
+          "name": "Aconomy",
+          "expires": "2021-04-01T08:00:00.000Z",
+          "description": "Send task",
+          "isComplete": true,
+          "file": {
+            "fieldname": "task-files",
+            "originalname": "Задача.docx",
+            "encoding": "7bit",
+            "mimetype": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "destination": "uploads",
+            "filename": "4d6485f2ecd7c0ba2fa6b4b8b2a6ac54",
+            "path": "uploads\\4d6485f2ecd7c0ba2fa6b4b8b2a6ac54",
+            "size": 18592
+          }
+        },
+        {
+          "id": 13,
+          "name": "Task-13",
+          "expires": "2021-03-18T14:42:45.091Z",
+          "description": "",
+          "isComplete": false
+        }
+      ],
+      "isShowingComplete": true
+    },
+    {
+      "id": 7,
+      "name": "Sport",
+      "tasks": [
+        {
+          "id": 7,
+          "name": "Task-7",
+          "expires": "2021-03-17T22:38:00.000Z",
+          "description": "",
+          "isComplete": true
+        },
+        {
+          "id": 8,
+          "name": "Task-8",
+          "expires": "2021-03-18T13:21:38.903Z",
+          "description": "",
+          "isComplete": false
+        },
+        {
+          "id": 9,
+          "name": "Task-9",
+          "expires": "2021-03-18T13:21:43.639Z",
+          "description": "",
+          "isComplete": false
+        },
+        {
+          "id": 11,
+          "name": "Task-11",
+          "expires": "2021-03-18T13:55:00.000Z",
+          "description": "advc",
+          "isComplete": false
+        }
+      ],
+      "isShowingComplete": true
+    },
+    {
+      "id": 9,
+      "name": "СontainerAS",
+      "tasks": [
+        {
+          "id": 6,
+          "name": "AAAA",
+          "expires": "2021-03-17T22:38:00.553Z",
+          "description": "",
+          "isComplete": false
+        },
+        {
+          "id": 12,
+          "name": "Task-12",
+          "expires": "2021-03-18T14:09:00.000Z",
+          "description": "",
+          "isComplete": true
+        },
+        {
+          "id": 10,
+          "name": "Task-10",
+          "expires": "2021-03-18T13:21:47.950Z",
+          "description": "",
+          "isComplete": false
+        }
+      ],
+      "isShowingComplete": true
+    },
+    {
+      "id": 11,
+      "name": "Group-11",
+      "tasks": [
+        {
+          "id": 5,
+          "name": "Task-5",
+          "expires": "2021-03-17T22:37:47.952Z",
+          "description": "",
+          "isComplete": false
+        }
+      ],
+      "isShowingComplete": true
+    }
+  ],
+  "containerId": 12,
+  "taskId": 13
+}
